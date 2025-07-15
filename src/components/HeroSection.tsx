@@ -1,7 +1,7 @@
 import { Button } from "@/components/ui/button";
 import { ChevronDown, Sparkles, BookOpen, Users } from "lucide-react";
 import heroImage from "@/assets/hero-education.jpg";
-import logoSman from "@/assets/logo-sman1lumbang.jpg";
+import logoSman from "@/assets/logo-sman1lumbang.png";
 
 export function HeroSection() {
   const scrollToWebsites = () => {

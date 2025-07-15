@@ -1,5 +1,5 @@
 import { Heart, School, Mail, Phone, MapPin, Instagram, Music, Youtube } from "lucide-react";
-import logoSman from "@/assets/logo-sman1lumbang.jpg";
+import logoSman from "@/assets/logo-sman1lumbang.png";
 
 export function Footer() {
   return (
