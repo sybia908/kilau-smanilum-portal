@@ -1,6 +1,7 @@
 import { Button } from "@/components/ui/button";
 import { ChevronDown, Sparkles, BookOpen, Users } from "lucide-react";
 import heroImage from "@/assets/hero-education.jpg";
+import logoSman from "@/assets/logo-sman1lumbang.jpg";
 
 export function HeroSection() {
   const scrollToWebsites = () => {
@@ -21,6 +22,18 @@ export function HeroSection() {
 
       {/* Content */}
       <div className="relative z-10 text-center space-y-8 px-4 max-w-5xl mx-auto">
+        {/* School Logo */}
+        <div className="animate-fade-in flex justify-center">
+          <div className="relative">
+            <img 
+              src={logoSman} 
+              alt="Logo SMAN 1 Lumbang" 
+              className="w-24 h-24 md:w-32 md:h-32 object-contain rounded-2xl bg-white/10 backdrop-blur-sm border border-white/20 shadow-2xl"
+            />
+            <div className="absolute inset-0 rounded-2xl bg-gradient-to-br from-primary/20 to-transparent" />
+          </div>
+        </div>
+
         {/* Animated Badge */}
         <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-primary/10 border border-primary/20 backdrop-blur-sm animate-fade-in">
           <Sparkles className="h-4 w-4 text-primary animate-glow-pulse" />

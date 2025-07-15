@@ -32,6 +32,37 @@ export function WebsiteGrid() {
     }
   ];
 
+  const supportingServices = [
+    {
+      title: "E-Learning",
+      url: "elearning.smanilum.my.id",
+      description: "Platform pembelajaran online interaktif dengan materi digital, kuis, dan tugas elektronik untuk mendukung proses belajar mengajar.",
+      icon: "graduation" as const,
+      delay: 800
+    },
+    {
+      title: "Perpustakaan Digital",
+      url: "library.smanilum.my.id",
+      description: "Koleksi buku digital, jurnal, dan referensi akademik yang dapat diakses 24/7 untuk mendukung penelitian dan pembelajaran.",
+      icon: "library" as const,
+      delay: 1000
+    },
+    {
+      title: "PPDB Online",
+      url: "ppdb.smanilum.my.id",
+      description: "Sistem penerimaan peserta didik baru online yang memudahkan proses pendaftaran dan seleksi calon siswa baru.",
+      icon: "users" as const,
+      delay: 1200
+    },
+    {
+      title: "Alumni Network",
+      url: "alumni.smanilum.my.id",
+      description: "Platform networking alumni SMAN 1 Lumbang untuk berbagi informasi karir, peluang, dan menjaga silaturahmi.",
+      icon: "network" as const,
+      delay: 1400
+    }
+  ];
+
   return (
     <section id="websites" className="relative py-20 px-4">
       <div className="max-w-7xl mx-auto">
@@ -49,11 +80,29 @@ export function WebsiteGrid() {
           </p>
         </div>
 
-        {/* Grid */}
+        {/* Main Services Grid */}
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 xl:grid-cols-4 gap-6">
           {websites.map((website, index) => (
             <WebsiteCard key={index} {...website} />
           ))}
+        </div>
+
+        {/* Supporting Services Section */}
+        <div className="mt-20 space-y-8">
+          <div className="text-center space-y-4 animate-fade-in-up">
+            <h3 className="text-2xl md:text-3xl font-bold text-foreground">
+              Layanan Penunjang
+            </h3>
+            <p className="text-muted-foreground max-w-2xl mx-auto">
+              Layanan tambahan untuk mendukung ekosistem digital pendidikan yang lengkap
+            </p>
+          </div>
+          
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+            {supportingServices.map((service, index) => (
+              <WebsiteCard key={`support-${index}`} {...service} />
+            ))}
+          </div>
         </div>
 
         {/* Additional Info */}

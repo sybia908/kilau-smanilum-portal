@@ -1,4 +1,5 @@
-import { Heart, School, Mail, Phone, MapPin } from "lucide-react";
+import { Heart, School, Mail, Phone, MapPin, Instagram, Music, Youtube } from "lucide-react";
+import logoSman from "@/assets/logo-sman1lumbang.jpg";
 
 export function Footer() {
   return (
@@ -8,9 +9,11 @@ export function Footer() {
           {/* School Info */}
           <div className="space-y-4 animate-slide-in-left">
             <div className="flex items-center gap-3">
-              <div className="p-2 rounded-lg bg-primary/10">
-                <School className="h-6 w-6 text-primary" />
-              </div>
+              <img 
+                src={logoSman} 
+                alt="Logo SMAN 1 Lumbang" 
+                className="w-12 h-12 object-contain rounded-lg bg-white/5 border border-border/20"
+              />
               <div>
                 <h3 className="font-semibold text-foreground">SMAN 1 Lumbang</h3>
                 <p className="text-sm text-muted-foreground">Unggul dalam Prestasi</p>
@@ -20,6 +23,37 @@ export function Footer() {
               Sekolah Menengah Atas Negeri 1 Lumbang berkomitmen memberikan pendidikan berkualitas 
               dengan memanfaatkan teknologi digital untuk mendukung proses pembelajaran.
             </p>
+            
+            {/* Social Media */}
+            <div className="space-y-3">
+              <h5 className="font-medium text-foreground">Ikuti Kami</h5>
+              <div className="flex gap-3">
+                <a 
+                  href="https://www.instagram.com/sman1lumbang/" 
+                  target="_blank" 
+                  rel="noopener noreferrer"
+                  className="p-2 rounded-lg bg-gradient-to-br from-pink-500/10 to-purple-600/10 border border-pink-500/20 hover:border-pink-500/40 transition-all duration-300 group"
+                >
+                  <Instagram className="h-4 w-4 text-pink-500 group-hover:scale-110 transition-transform duration-300" />
+                </a>
+                <a 
+                  href="https://www.tiktok.com/@sman1lumbang" 
+                  target="_blank" 
+                  rel="noopener noreferrer"
+                  className="p-2 rounded-lg bg-gradient-to-br from-gray-900/10 to-red-500/10 border border-gray-700/20 hover:border-red-500/40 transition-all duration-300 group"
+                >
+                  <Music className="h-4 w-4 text-gray-700 dark:text-gray-300 group-hover:scale-110 transition-transform duration-300" />
+                </a>
+                <a 
+                  href="https://www.youtube.com/channel/UCyApX0-byphHOKi-4hrtsBg" 
+                  target="_blank" 
+                  rel="noopener noreferrer"
+                  className="p-2 rounded-lg bg-gradient-to-br from-red-500/10 to-red-600/10 border border-red-500/20 hover:border-red-500/40 transition-all duration-300 group"
+                >
+                  <Youtube className="h-4 w-4 text-red-500 group-hover:scale-110 transition-transform duration-300" />
+                </a>
+              </div>
+            </div>
           </div>
 
           {/* Contact Info */}
