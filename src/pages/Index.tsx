@@ -1,12 +1,29 @@
-// Update this page (the content is just a fallback if you fail to update the page)
+import { AnimatedBackground } from "@/components/AnimatedBackground";
+import { HeroSection } from "@/components/HeroSection";
+import { WebsiteGrid } from "@/components/WebsiteGrid";
+import { Footer } from "@/components/Footer";
+import { ScrollToTop } from "@/components/ScrollToTop";
 
 const Index = () => {
   return (
-    <div className="min-h-screen flex items-center justify-center bg-background">
-      <div className="text-center">
-        <h1 className="text-4xl font-bold mb-4">Welcome to Your Blank App</h1>
-        <p className="text-xl text-muted-foreground">Start building your amazing project here!</p>
+    <div className="min-h-screen bg-gradient-hero relative overflow-x-hidden">
+      {/* Animated Background */}
+      <AnimatedBackground />
+      
+      {/* Main Content */}
+      <div className="relative z-10">
+        {/* Hero Section */}
+        <HeroSection />
+        
+        {/* Website Grid */}
+        <WebsiteGrid />
+        
+        {/* Footer */}
+        <Footer />
       </div>
+      
+      {/* Scroll to Top Button */}
+      <ScrollToTop />
     </div>
   );
 };
