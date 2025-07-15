@@ -1,6 +1,6 @@
 import { Button } from "@/components/ui/button";
 import { Card } from "@/components/ui/card";
-import { ExternalLink, Globe, Cloud, Heart, GraduationCap, BookOpen, Users, Network } from "lucide-react";
+import { ExternalLink, Globe, Cloud, Heart, GraduationCap, BookOpen, Users, Share2 } from "lucide-react";
 
 interface WebsiteCardProps {
   title: string;
@@ -18,7 +18,7 @@ const iconMap = {
   graduation: GraduationCap,
   library: BookOpen,
   users: Users,
-  network: Network,
+  network: Share2,
 };
 
 export function WebsiteCard({ title, url, description, icon = "school", delay = 0 }: WebsiteCardProps) {
